@@ -1,0 +1,43 @@
+<html>
+	<head>
+	<div>
+	<p>helloooo</p>
+	</div>
+		<style>
+		td {
+			border: solid black 5px;
+			width:200px;
+			height: 90px;
+		}
+		.filled {
+			background-color: black;
+		}
+		</style>
+	</head>
+	<body>
+
+		<table id="grid">
+		</table>
+
+		<script>
+		console.log("hello");
+		var size = 5;
+		var table = document.getElementById("grid");
+		//then you create a loop in order to create a table the size amount of times (whatever that's defined as.)**when you have two for loops, you must create a new variable that is being defined. you're getting size times size cells. 
+
+		for (i = 0; i < size; i++) {
+			var row = table.insertRow(i);
+			for (h = 0; h <size; h++) {
+			var cell = row.insertCell(h);
+
+			}
+			if (i == h) {  cell.className="filled";
+			}
+			if((h+i)===size-1){
+				cell.className="filled";
+			}
+		}
+//grr I'm not sure what to do in order to fix it!!
+		</script>
+	</body>
+</html>
